@@ -1,0 +1,28 @@
+TODO
+/home/index:
+	Add Band description prop (Can be "static" text set in Band constructor)
+	Add <a> href to band <li> that links to the albums of the band.
+
+/albums/index/{band-id}:
+	Create view
+		/index/{band-id} Should take in id of band and display their albums.
+			No need for "data linking", data is hard-coded so just new up a DataManager in the controller
+				private static DataManager _data = new DataManager(); for example.
+
+				reach the band data by doing something like
+				Band band = _data.GetBandById({band-id}); (gives you the Band with {band-id})
+
+	Optional: Fallback if url contains no ID?
+
+Optional:
+/albums/details/?bandId={band-id}&albumId={album-id}
+	Add view to display detail for the album. (inside AlbumController)
+	Add method GetAlbumById to Band class
+
+	AlbumController method for details should be something like
+	    public IActionResult Index(int bandId, int albumId) { }
+
+	Albums in View /albums/index/{band-id} should have a link to /albums/details/?bandId={band-id}&albumId={album-id}
+
+
+

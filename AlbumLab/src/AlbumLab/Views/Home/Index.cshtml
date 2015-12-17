@@ -11,12 +11,12 @@
 </head>
 <body>
     <ul>
-        @foreach (Artist item in (List<Artist>)ViewData["artists"])
+        @foreach (Band artist in (List<Band>)ViewData["artists"])
         {
             <li>
-                @item.Name
+                @artist.Name
                 <ul>
-                    @foreach (Album album in (item.Albums))
+                    @foreach (Album album in (artist.Albums))
                     {
                         <li>@album.Name</li>
                     }

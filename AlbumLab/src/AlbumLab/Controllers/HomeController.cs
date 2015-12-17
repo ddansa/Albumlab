@@ -11,13 +11,12 @@ namespace AlbumLab.Controllers
 {
     public class HomeController : Controller
     {
-        public static DataManager _data = new DataManager();
+        private static DataManager _data = new DataManager();
         // GET: /<controller>/
         public IActionResult Index()
         {
 
-            ViewData["artists"] = _data.Artists;
-
+            ViewData["artists"] = _data.Bands;
             return View();
         }
     }

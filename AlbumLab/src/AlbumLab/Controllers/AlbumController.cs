@@ -11,7 +11,7 @@ namespace AlbumLab.Controllers
     public class AlbumController : Controller
     {
         // GET: /<controller>/
-        public IActionResult Index()
+        public IActionResult Index(int id)
         {
             return View();
         }

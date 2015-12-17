@@ -11,17 +11,23 @@ namespace AlbumLab.Models
     {
         public DataManager()
         {
-            Artists = new List<Artist>();
-            _Rnd = new Random();
-            for (int i = 0; i < 15; i++)
+            Bands = new List<Band>();
+            // Creates new 15 bands
+            for (int i = 1; i <= 15; i++)
             {
-                Artist artist = new Artist(i, "Artist " + i.ToString());
-                Artists.Add(artist);
+                Band artist = new Band(i, "Artist " + i.ToString());
+                Bands.Add(artist);
             }
         }
 
-        public List<Artist> Artists { get; set; }
+        public Band GetBandById(int id)
+        {
+            // Finds the first band in our Bands property with the same Id as in-parameter
+            return Bands.FirstOrDefault(b => b.Id == id);
+        }
 
-        public static Random _Rnd { get; set; }
+
+        public List<Band> Bands { get; set; }
+
     }
 }

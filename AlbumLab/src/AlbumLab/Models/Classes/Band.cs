@@ -5,15 +5,16 @@ using System.Threading.Tasks;
 
 namespace AlbumLab.Models.Classes
 {
-    public class Artist
+    public class Band
     {
-        public Artist(int id, string name)
+        public Band(int id, string name)
         {
             Name = name;
             Id = id;
             Albums = new List<Album>();
 
-            for (int i = 0; i < DataManager._Rnd.Next(1, 11); i++)
+            // Creates 3 albums for this band
+            for (int i = 1; i <= 3; i++)
             {
                 Album album = new Album(i, "Album " + i.ToString());
                 Albums.Add(album);
