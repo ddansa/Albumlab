@@ -7,24 +7,15 @@ namespace AlbumLab.Models.Classes
 {
     public class Band
     {
-        public Band(int id, string name)
+        public Band(string name, string description, List<Album> albums)
         {
             Name = name;
-            Id = id;
-            Albums = new List<Album>();
-
-            // Creates 3 albums for this band
-            for (int i = 1; i <= 3; i++)
-            {
-                Album album = new Album(i, "Album " + i.ToString());
-                Albums.Add(album);
-            }
+            Description = description;
+            Albums = albums;
         }
 
-        public int Id { get; set; }
         public string Name { get; set; }
-
+        public string Description { get; set; }
         public List<Album> Albums { get; set; }
-
     }
 }

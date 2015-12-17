@@ -1,26 +1,16 @@
-﻿@using AlbumLab.Models
-@using AlbumLab.Models.Classes
-@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-<html>
+﻿<html>
 <head>
     <title>Hi</title>
 </head>
 <body>
+    <h1>@Model.Name</h1>
+    <p>@Model.Description</p>
+    <b>Album</b>
     <ul>
-        @foreach (Band artist in (List<Band>)ViewData["artists"])
+        @foreach (var album in Model.Albums)
         {
             <li>
-                @artist.Name
-                <ul>
-                    @foreach (Album album in (artist.Albums))
-                    {
-                        <li>@album.Name</li>
-                    }
-                </ul>
+                <a href="album/details/@album.Id">@album.Title</a> (@album.Year)
             </li>
         }
     </ul>
