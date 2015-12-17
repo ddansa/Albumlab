@@ -15,17 +15,17 @@ namespace AlbumLab.Models
             string desc = "Movits! är en svensk hiphop - grupp från Hertsön, ett bostadsområde i Luleå, bestående av bröderna \"Johan Jivin\" och \"Mördar-Anders\" Rensfeldt, samt saxofonisten Jocke \"One-Take\" Nilsson från Piteå. Gruppen spelar en svängig blandning mellan jazz och hiphop. Movits! beskriver sig själva som \"Djangogitarr, Blås och Streetswing. Musik för såväl Art directorn som för din mamma!\".";
 
             List<Album> albums = new List<Album>();
-            albums.Add(new Album(1, "Äppelknyckarjazz", 2008));
-            albums.Add(new Album(2, "Ut ur min skalle", 2011));
-            albums.Add(new Album(3, "Huvudet Bland Molnen", 2013));
-            albums.Add(new Album(4, "Dom försökte begrava oss, dom visste inte att vi var frön", 2015));
+            albums.Add(new Album("Äppelknyckarjazz", 2008));
+            albums.Add(new Album("Ut ur min skalle", 2011));
+            albums.Add(new Album("Huvudet Bland Molnen", 2013));
+            albums.Add(new Album("Dom försökte begrava oss, dom visste inte att vi var frön", 2015));
 
             Band = new Band(name, desc, albums);
         }
 
         public Band Band { get; set; }
 
-        public Album GetAlbumById(int id)
+        public Album GetAlbumById(string id)
         {
             return Band.Albums.Where(x => x.Id == id).FirstOrDefault();
         }
