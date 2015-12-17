@@ -1,3 +1,6 @@
+
+
+#### FUK DIS SHIT WE DOIN IT EASY MODE ####
 TODO
 /home/index:
 	Add Band description prop (Can be "static" text set in Band constructor)
@@ -24,5 +27,6 @@ Optional:
 
 	Albums in View /albums/index/{band-id} should have a link to /albums/details/?bandId={band-id}&albumId={album-id}
 
+#### FUK DIS SHIT WE DOIN IT EASY MODE ####
 
 

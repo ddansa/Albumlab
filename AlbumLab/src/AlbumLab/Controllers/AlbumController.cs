@@ -6,12 +6,17 @@ using Microsoft.AspNet.Mvc;
 
 namespace AlbumLab.Controllers
 {
-    class AlbumController : MainController
+    public class AlbumController : MainController
     {
+        public IActionResult Index()
+        {
+            return View(_data.Band);
+            //return RedirectToAction("Index", "Home");
+        }
+
         public IActionResult Details(int id)
         {
-            //return View(_data.GetAlbumById(id));
-            return View();
+            return View(_data.GetAlbumById(id));
         }
     }
 }

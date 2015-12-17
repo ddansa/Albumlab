@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AlbumLab.Controllers
 {
-    abstract class MainController : Controller
+    public abstract class MainController : Controller
     {
         public static DataManager _data = new DataManager();
     }
