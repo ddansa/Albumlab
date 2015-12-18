@@ -9,6 +9,6 @@ namespace AlbumLab.Controllers
 {
     public abstract class MainController : Controller
     {
-        public static DataManager _data = new DataManager();
+        protected static DataManager _data = new DataManager();
     }
 }
